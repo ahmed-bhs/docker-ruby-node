@@ -1,13 +1,13 @@
-FROM node:14-alpine AS nodejs
+FROM node:10 AS nodejs
 
-FROM ruby:2-alpine
+FROM ruby:2
 
-ENV NODE_MAJOR 14
+ENV LANG C.UTF-8
 
-RUN addgroup -g 1000 node \
-  && adduser -u 1000 -G node -s /bin/sh -D node \
-  && apk add --no-cache \
-  libstdc++
+ENV NODE_MAJOR 10
+
+RUN groupadd --gid 1000 node \
+  && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
 COPY --from=nodejs /usr/local/bin/node /usr/local/bin/
 COPY --from=nodejs /usr/local/lib/node_modules /usr/local/lib/node_modules

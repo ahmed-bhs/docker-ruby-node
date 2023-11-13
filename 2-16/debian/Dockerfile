@@ -1,10 +1,10 @@
-FROM node:12-stretch-slim AS nodejs
+FROM node:16 AS nodejs
 
-FROM ruby:2-slim-stretch
+FROM ruby:2
 
 ENV LANG C.UTF-8
 
-ENV NODE_MAJOR 12
+ENV NODE_MAJOR 16
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node

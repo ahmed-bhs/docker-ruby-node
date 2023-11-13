@@ -1,4 +1,4 @@
-# Ruby + Node Docker Image [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:alpine.svg)](https://microbadger.com/#/images/starefossen/ruby-node:alpine)
+# Ruby + Node Docker Image [![Image Layers](https://images.microbadger.com/badges/image/ahmedbhs/ruby-node.svg)](https://microbadger.com/#/images/ahmedbhs/ruby-node)
 
 Docker image with Ruby and Node.js with Yarn installed and ready to roll.
 
@@ -8,21 +8,11 @@ Both Ruby and Node.js are based on official images. Ruby is used as base reposit
 
 Maintained combinations:
 
-- Ruby: 2 (2.6) Node: 6.x (6.16)
-- Ruby: 2 (2.6) Node: 8.x (8.15)
-- Ruby: 2 (2.6) Node: 10.x (10.15)
+- Ruby: 2 (2.6) Node: 10.x
+- Ruby: 2 (2.6) Node: 12.x)
+- Ruby: 2 (2.6) Node: 14.x
+- Ruby: 2 (2.6) Node: 16.x
 
-## Supported tags and respective `Dockerfile` links
-
-- [`latest`, `2-10` (2-10/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-10/stretch/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-10.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-10)
-- [`slim`, `2-10-slim` (2-10/stretch-slim/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-10/stretch-slim/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-10-slim.svg)](https://microbadger.com/#/images/starefossen/ruby-node:slim)
-- [`alpine`, `2-10-alpine` (2-10/alpine/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-10/alpine/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-10-alpine.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-10-alpine)
-- [`2-8` (2-8/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-8/stretch/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-8.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-8)
-- [`2-8-slim`, `2-8` (2-8/stretch-slim/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-8/stretch-slim/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-8-slim.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-8-slim)
-- [`2-8-alpine` (2-8/alpine/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-8/alpine/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-8-alpine.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-8-alpine)
-- [`2-6` (2-6/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-6/stretch/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-6.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-6)
-- [`2-6-slim` (2-6/stretch-slim/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-6/stretch-slim/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-6-slim.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-6-slim)
-- [`2-6-alpine` (2-6/alpine/Dockerfile)](https://github.com/Starefossen/docker-ruby-node/blob/master/2-6/alpine/Dockerfile) [![Image Layers](https://images.microbadger.com/badges/image/starefossen/ruby-node:2-6-alpine.svg)](https://microbadger.com/#/images/starefossen/ruby-node:2-6-alpine)
 
 ## Why Node.js and Ruby together?
 
@@ -38,27 +28,15 @@ Node: Instead variables NODE_VERSION and YARN_VERSION is available variable NODE
 ## How to use this image
 
 ```
-$ docker run -v "$PWD":/usr/src/app -p "8080:8080" starefossen/ruby-node
+$ docker run -v "$PWD":/usr/src/app -p "8080:8080" ahmedbhs/ruby-node
 ```
 
 ## Image Variants
 
-The `starefossen/ruby-node` images come in three flavors, each designed for a
+The `ahmedbhs/ruby-node` images come in three flavors, each designed for a
 specific use case.
 
-`starefossen/ruby-node:latest`
-
-This is the defacto image. If you are unsure about what your needs are, you
-probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-Based on Debian distribution.
-
-`starefossen/ruby-node:slim`
-
-Reduced version of `latest` image.
-
-`starefossen/ruby-node:alpine`
-
-This is the smallest image possible. It is based on the Alpine Linux base image.
+`ahmedbhs/ruby-node:latest`
 
 ## Default Locale
 
@@ -66,7 +44,7 @@ Versions 2-6, 2-8, 2-10 has defined locale C.UTF-8 instead default POSIX.
 
 ## License
 
-This Docker image is licensed under the [MIT License](https://github.com/Starefossen/docker-ruby-node/blob/master/LICENSE).
+This Docker image is licensed under the [MIT License](https://github.com/ahmedbhs/docker-ruby-node/blob/master/LICENSE).
 
 Software contained in this image is licensed under the following:
 
@@ -90,7 +68,7 @@ Support for older versions (down to v1.0) is provided on a best-effort basis.
 ### Issues
 
 If you have any problems with or questions about this image, please contact us
-through a [GitHub issue](https://github.com/Starefossen/docker-ruby-node/issues).
+through a [GitHub issue](https://github.com/ahmedbhs/docker-ruby-node/issues).
 
 ### Contributing
 
@@ -99,7 +77,7 @@ we are always thrilled to receive pull requests, and do our best to process them
 as fast as we can.
 
 Before you start to code, we recommend discussing your plans through a [GitHub
-issue](https://github.com/Starefossen/docker-ruby-node/issues), especially for
+issue](https://github.com/ahmedbhs/docker-ruby-node/issues), especially for
 more ambitious contributions. This gives other contributors a chance to point
 you in the right direction, give you feedback on your design, and help you find
 out if someone else is working on the same thing.
@@ -115,4 +93,4 @@ Note: If you make a significant contribution and are not considered for
 commit-access log an issue or contact one of the Collaborators directly.
 
 - Radovan Šmitala - @radeno
-- Hans Kristian Flaatten - @Starefossen
+- Hans Kristian Flaatten - @ahmedbhs
